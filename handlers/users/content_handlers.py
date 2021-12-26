@@ -9,7 +9,7 @@ async def photo_handler(msg: types.Message):
 
 @dp.message_handler(content_types=types.ContentTypes.STICKER)
 async def sticker_handler(msg: types.Message):
-    await msg.answer("Bu qanaqa stiker bo'ldi 😆")
+    await msg.answer("😀")
 
 
 @dp.message_handler(content_types=types.ContentTypes.ANIMATION)
@@ -46,8 +46,3 @@ async def location_handler(msg: types.Message):
 async def video_handler(msg: types.Message):
     await msg.answer("Ooo video uchun rahmat 😁")
 
-
-
-@dp.message_handler(content_types=types.ContentTypes.ANY)
-async def sticker_handler(msg: types.Message):
-    await msg.answer("Bu nima? 🙄")

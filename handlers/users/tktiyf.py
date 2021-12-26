@@ -23,6 +23,8 @@ async def bot_navbar(message: types.Message):
         await bot.send_message(message.from_user.id, "🏢 Toshkent kimyo-texnologiya instituti Yangiyer filiali hisob raqami: \n"
                                                      "💳 400910860244137094100079001\n"
                                                      "📞 Tel: +998993248008")
+
+        #   ---- Courses ----
     elif mess == "1-kurs":
         await bot.send_message(message.from_user.id, "Hali ma'lumot kiritilmagan 😅")
     elif mess == "2-kurs":
@@ -41,7 +43,7 @@ async def bot_navbar(message: types.Message):
 
 
 
-                    #--- Courses ---
+                    #--- Groups ---
 
     elif mess == "👑 7-19 AB":
         await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu)
@@ -77,6 +79,5 @@ async def bot_navbar(message: types.Message):
         await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu6_19)
     elif mess == "🔴Dushanba" or mess == "🟠Seshanba" or mess == "🟡Chorshanba" or mess == "🟢Payshanba" or mess == "🔵Juma" or message.text == "⚪️Shanba":
         await bot.send_message(message.from_user.id, sche['6-19'][message.text.lower()])
-
     else:
-        await bot.send_message(message.from_user.id, "Iltimos tayyor tugmalardan foydalaning!")
+        await bot.send_message(message.from_user.id, "tktiyfda xato")
