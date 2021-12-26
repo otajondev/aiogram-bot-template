@@ -1,8 +1,7 @@
 from aiogram import types
-from aiogram import Bot, Dispatcher, executor, types
 from loader import dp, bot
 from keyboards.default import keyboards as kb
-
+from utils.db_api.schedule import schedule as sche
 
 @dp.message_handler()
 async def bot_navbar(message: types.Message):
@@ -44,40 +43,40 @@ async def bot_navbar(message: types.Message):
 
                     #--- Courses ---
 
-    # elif mess == "👑 7-19 AB":
-    #     await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu)
-    # elif mess == "🔥Dushanba" or mess == "⭐️Seshanba" or mess == "🕊Chorshanba" or mess == "🌿Payshanba" or mess == "☀️Juma" or mess == "🌈Shanba":
-    #     await bot.send_message(message.from_user.id, sche['7-19'][message.text.lower()])
-    #
-    # elif mess == "1-19 NMKT":
-    #     await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu1_19)
-    # elif mess == "🟠Dushanba" or mess == "🟡Seshanba" or mess == "🟢Chorshanba" or mess == "🔵Payshanba" or mess == "⚪️Juma" or mess == "🔴Shanba":
-    #     await bot.send_message(message.from_user.id, sche['1-19'][message.text.lower()])
-    #
-    # elif mess == "2-19 NMKT":
-    #     await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu2_19)
-    # elif mess == "🟡Dushanba" or mess == "🟢Seshanba" or mess == "🔵Chorshanba" or mess == "⚪️Payshanba" or mess == "🔴Juma" or mess == "🟠Shanba":
-    #     await bot.send_message(message.from_user.id, sche['2-19'][message.text.lower()])
-    #
-    # elif mess == "3-19 QMKT":
-    #     await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu3_19)
-    # elif mess == "🟢Dushanba" or mess == "🔵Seshanba" or mess == "⚪️Chorshanba" or mess == "🔴Payshanba" or mess == "🟠Juma" or mess == "🟡Shanba":
-    #     await bot.send_message(message.from_user.id, sche['3-19'][message.text.lower()])
-    #
-    # elif mess == "4-19 QMKT":
-    #     await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu4_19)
-    # elif mess == "🔵Dushanba" or mess == "⚪️Seshanba" or mess == "🔴Chorshanba" or mess == "🟠Payshanba" or mess == "🟡Juma" or mess == "🟢Shanba":
-    #     await bot.send_message(message.from_user.id, sche['4-19'][message.text.lower()])
-    #
-    # elif mess == "5-19 TMJ":
-    #     await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu5_19)
-    # elif mess == "⚪️Dushanba" or mess == "🔴Seshanba" or mess == "🟠Chorshanba" or mess == "🟡Payshanba" or mess == "🟢Juma" or mess == "🔵Shanba":
-    #     await bot.send_message(message.from_user.id, sche['5-19'][message.text.lower()])
-    #
-    # elif mess == "6-19 TMJ":
-    #     await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu6_19)
-    # elif mess == "🔴Dushanba" or mess == "🟠Seshanba" or mess == "🟡Chorshanba" or mess == "🟢Payshanba" or mess == "🔵Juma" or message.text == "⚪️Shanba":
-    #     await bot.send_message(message.from_user.id, sche['6-19'][message.text.lower()])
+    elif mess == "👑 7-19 AB":
+        await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu)
+    elif mess == "🔥Dushanba" or mess == "⭐️Seshanba" or mess == "🕊Chorshanba" or mess == "🌿Payshanba" or mess == "☀️Juma" or mess == "🌈Shanba":
+        await bot.send_message(message.from_user.id, sche['7-19'][message.text.lower()])
+
+    elif mess == "1-19 NMKT":
+        await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu1_19)
+    elif mess == "🟠Dushanba" or mess == "🟡Seshanba" or mess == "🟢Chorshanba" or mess == "🔵Payshanba" or mess == "⚪️Juma" or mess == "🔴Shanba":
+        await bot.send_message(message.from_user.id, sche['1-19'][message.text.lower()])
+
+    elif mess == "2-19 NMKT":
+        await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu2_19)
+    elif mess == "🟡Dushanba" or mess == "🟢Seshanba" or mess == "🔵Chorshanba" or mess == "⚪️Payshanba" or mess == "🔴Juma" or mess == "🟠Shanba":
+        await bot.send_message(message.from_user.id, sche['2-19'][message.text.lower()])
+
+    elif mess == "3-19 QMKT":
+        await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu3_19)
+    elif mess == "🟢Dushanba" or mess == "🔵Seshanba" or mess == "⚪️Chorshanba" or mess == "🔴Payshanba" or mess == "🟠Juma" or mess == "🟡Shanba":
+        await bot.send_message(message.from_user.id, sche['3-19'][message.text.lower()])
+
+    elif mess == "4-19 QMKT":
+        await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu4_19)
+    elif mess == "🔵Dushanba" or mess == "⚪️Seshanba" or mess == "🔴Chorshanba" or mess == "🟠Payshanba" or mess == "🟡Juma" or mess == "🟢Shanba":
+        await bot.send_message(message.from_user.id, sche['4-19'][message.text.lower()])
+
+    elif mess == "5-19 TMJ":
+        await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu5_19)
+    elif mess == "⚪️Dushanba" or mess == "🔴Seshanba" or mess == "🟠Chorshanba" or mess == "🟡Payshanba" or mess == "🟢Juma" or mess == "🔵Shanba":
+        await bot.send_message(message.from_user.id, sche['5-19'][message.text.lower()])
+
+    elif mess == "6-19 TMJ":
+        await bot.send_message(message.from_user.id, "Hafta kunini tanlang", reply_markup=kb.weekMenu6_19)
+    elif mess == "🔴Dushanba" or mess == "🟠Seshanba" or mess == "🟡Chorshanba" or mess == "🟢Payshanba" or mess == "🔵Juma" or message.text == "⚪️Shanba":
+        await bot.send_message(message.from_user.id, sche['6-19'][message.text.lower()])
 
     else:
         await bot.send_message(message.from_user.id, "Iltimos tayyor tugmalardan foydalaning!")
