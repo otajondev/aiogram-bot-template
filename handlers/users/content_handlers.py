@@ -1,5 +1,5 @@
 from aiogram import types
-from loader import dp, bot
+from loader import dp
 
 
 @dp.message_handler(content_types=types.ContentTypes.PHOTO)
@@ -45,4 +45,3 @@ async def location_handler(msg: types.Message):
 @dp.message_handler(content_types=types.ContentTypes.VIDEO)
 async def video_handler(msg: types.Message):
     await msg.answer("Ooo video uchun rahmat 😁")
-
