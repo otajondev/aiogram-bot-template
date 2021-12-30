@@ -1,6 +1,7 @@
 from aiogram import types
 from loader import dp, bot
 from keyboards.default import keyboards as kb
+from keyboards.inline import inline_keyboard as ikb
 from utils.db_api.schedule import schedule as sche
 
 @dp.message_handler()
@@ -12,7 +13,7 @@ async def bot_navbar(message: types.Message):
 ☎️ Tel: +998955115856
 
 
-🙋🏻‍♂️ Taklif va shikoyatlaringiz bo'lsa, @Otajon_Olimbaev ga murojat qiling.''')
+🙋🏻‍♂️ Taklif va shikoyatlaringiz bo'lsa, @Otajon_Olimbaev ga murojat qiling.''', reply_markup=ikb.aboutMenu)
     elif mess == "🏢Manzil":
         await bot.send_message(message.from_user.id, "📍 Sirdaryo viloyati Yangiyer shahri Ma'rifat mahallasi Tinchlik ko'chasi 1-uy\n"
                                                      "📍Google xaritadan ham ko'rishingiz mumkin👇")
