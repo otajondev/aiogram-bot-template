@@ -19,6 +19,12 @@ categoryMenu = InlineKeyboardMarkup(
     ],
 ])
 
+mapsMenu = InlineKeyboardMarkup(
+    inline_keyboard=[
+        InlineKeyboardButton(text="🔗 Google Mapsga o'tish", url="https://maps.app.goo.gl/WVCTHiL7jzZWBqFr8"),
+    ],
+)
+
 
 # 2-usul
 coursesMenu = InlineKeyboardMarkup(row_width=1)

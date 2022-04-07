@@ -1,5 +1,5 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from keyboards.inline.callback_data import course_callback, book_callback
+# from keyboards.inline.callback_data import course_callback, book_callback
 
 # 1-usul.
 aboutMenu = InlineKeyboardMarkup(
@@ -9,16 +9,65 @@ aboutMenu = InlineKeyboardMarkup(
     #     InlineKeyboardButton(text="📚 Kitoblar", callback_data="books"),
     # ],
     [
-        InlineKeyboardButton(text="🔗 Institutimiz saytiga o'tish", url="https://tktiyf.uz/"),
+        InlineKeyboardButton(text="🌐 Institutimiz saytiga o'tish", url="https://tktiyf.uz/"),
     ],
     [
-        InlineKeyboardButton(text="🔍 Qidirish", switch_inline_query_current_chat=""),
+        InlineKeyboardButton(text="📲 Rasmiy kanal", url="https://t.me/tkti_yangiyerf"),
+    ],
+    [
+        InlineKeyboardButton(text="📚 ARM", url="https://t.me/kutubxona_tktiyf"),
+    ],
+    # [
+    #     InlineKeyboardButton(text="🔗 HEMIS", url="https://t.me/tkti_yangiyerf"),
+    # ],
+    [
+        InlineKeyboardButton(text="🌐 HEMIS (Talaba)", url="https://stktiyf.e-edu.uz/dashboard/login"),
+    ],
+    [
+        InlineKeyboardButton(text="🌐 HEMIS (O'qituvchi)", url="https://tktiyf.e-edu.uz/dashboard/login"),
     ],
     [
         InlineKeyboardButton(text="✉️Ulashish", switch_inline_query="Zo'r bot ekan"),
     ],
+
 ])
 
+
+
+mapMenu = InlineKeyboardMarkup(
+    inline_keyboard=[
+    # [
+    #     InlineKeyboardButton(text="💻 Kurslar", callback_data="courses"),
+    #     InlineKeyboardButton(text="📚 Kitoblar", callback_data="books"),
+    # ],
+    [
+        InlineKeyboardButton(text="🔗 Google Mapsga o'tish", url="https://maps.app.goo.gl/WVCTHiL7jzZWBqFr8"),
+    ],
+    # [
+    #     InlineKeyboardButton(text="🔍 Qidirish", switch_inline_query_current_chat=""),
+    # ],
+    # [
+    #     InlineKeyboardButton(text="✉️Ulashish", switch_inline_query="Zo'r bot ekan"),
+    # ],
+])
+
+engrade = InlineKeyboardMarkup(
+    inline_keyboard=[
+
+    [
+        InlineKeyboardButton(text="Kunduzgi kirish ballari", url="https://abt.uz/university/view?slug=toshkent-kimyo-texnologiya-instituti-yangiyer-filiali&year=2021&type=kunduzgi&lang=uz"),
+    ],
+    [
+        InlineKeyboardButton(text="Kunduzgi kirish ballari (RUS)", url="https://abt.uz/university/view?slug=toshkent-kimyo-texnologiya-instituti-yangiyer-filiali&year=2021&type=kunduzgi&lang=ru"),
+    ],
+    [
+        InlineKeyboardButton(text="Sirtqi kirish ballari", url="https://abt.uz/university/view?slug=toshkent-kimyo-texnologiya-instituti-yangiyer-filiali&year=2021&type=sirtqi&lang=uz"),
+    ],
+    [
+        InlineKeyboardButton(text="Shaxsiy kabinet", url="https://my.dtm.uz/login"),
+    ],
+
+])
 
 # # 2-usul
 # coursesMenu = InlineKeyboardMarkup(row_width=1)

@@ -4,7 +4,6 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 btn_main = KeyboardButton("🏠 Menyu")
 btn_backMenu = KeyboardButton("⬅️Orqaga")
 btn_back = KeyboardButton("⬅️ Orqaga")
-btn_back2 = KeyboardButton("⬅️  Orqaga")  # to groupMenu
 #          --- Main menu ---
 
 mainMenu = ReplyKeyboardMarkup(
@@ -14,7 +13,10 @@ mainMenu = ReplyKeyboardMarkup(
             KeyboardButton("💰Hisob raqam"),
         ],
         [
+            KeyboardButton("🎓Kirish ballari"),
             KeyboardButton("🏢Manzil"),
+        ],
+        [
             KeyboardButton("📞 Biz bilan bog'lanish"),
         ],
     ],
@@ -40,7 +42,9 @@ coursesMenu = ReplyKeyboardMarkup(
 
 #           --- Groups list ---
 
-groupMenu = ReplyKeyboardMarkup(
+#           --- 3-courses ---
+
+groupMenu3 = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton("1-19 NMKT"),
@@ -61,97 +65,46 @@ groupMenu = ReplyKeyboardMarkup(
     resize_keyboard=True)
 
 
-
-
-#           --- 7-19 Week Days ---
-
-weekMenu = ReplyKeyboardMarkup(
+#           --- 1-courses ---
+groupMenu1 = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton("🔥Dushanba"),
-            KeyboardButton("⭐️Seshanba"),
-            KeyboardButton("🕊Chorshanba"),],
-        [
-            KeyboardButton("🌿Payshanba"),
-            KeyboardButton("☀️Juma"),
-            KeyboardButton("🌈Shanba"),
+            KeyboardButton("1,2,3-21 NMKT"),
+            KeyboardButton("1,2,3,4-21 QMKT"),
+            KeyboardButton("1,2,3-21 TMJ"),
         ],
         [
-            btn_back2,
+            KeyboardButton("1,2-21 AB"),
+            KeyboardButton("1,2-21 KT"),
+            KeyboardButton("1,2,3-21 OOT"),
+        ],
+        [
+            btn_back,
+            KeyboardButton("4R-21"),
             btn_main,
         ],
-    ], resize_keyboard=True)
+    ],
+    resize_keyboard=True)
 
 
-#        --- 1-19 Week Days ---
-weekMenu1_19 = ReplyKeyboardMarkup(
+#           --- 2-courses ---
+groupMenu2 = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton("🟠Dushanba"),
-            KeyboardButton("🟡Seshanba"),
-            KeyboardButton("🟢Chorshanba"),],
-        [
-            KeyboardButton("🔵Payshanba"),
-            KeyboardButton("⚪️Juma"),
-            KeyboardButton("🔴Shanba"),
+            KeyboardButton("1,2,4,5-20"),
+            KeyboardButton("7,8,9-20"),
+            KeyboardButton("14,15-20"),
         ],
         [
-            btn_back2,
+            KeyboardButton("21,22-20"),
+            KeyboardButton("17,18,19-20"),
+            KeyboardButton("11R,12R-20"),
+        ],
+        [
+            btn_back,
+            KeyboardButton("13R,24R-20"),
             btn_main,
         ],
-    ], resize_keyboard=True)
-
-
-# --- 2-19 Week Days ---
-btnDu2_19 = KeyboardButton("🟡Dushanba")
-btnSe2_19 = KeyboardButton("🟢Seshanba")
-btnCho2_19 = KeyboardButton("🔵Chorshanba")
-btnPa2_19 = KeyboardButton("⚪️Payshanba")
-btnJu2_19 = KeyboardButton("🔴Juma")
-btnSha2_19 = KeyboardButton("🟠Shanba")
-weekMenu2_19 = ReplyKeyboardMarkup(resize_keyboard=True).add(btnDu2_19, btnSe2_19, btnCho2_19, btnPa2_19, btnJu2_19, btnSha2_19, btn_back2, btn_main)
-
-
-# --- 3-19 Week Days ---
-btnDu3_19 = KeyboardButton("🟢Dushanba")
-btnSe3_19 = KeyboardButton("🔵Seshanba")
-btnCho3_19 = KeyboardButton("⚪️Chorshanba")
-btnPa3_19 = KeyboardButton("🔴Payshanba")
-btnJu3_19 = KeyboardButton("🟠Juma")
-btnSha3_19 = KeyboardButton("🟡Shanba")
-weekMenu3_19 = ReplyKeyboardMarkup(resize_keyboard=True).add(btnDu3_19, btnSe3_19, btnCho3_19, btnPa3_19, btnJu3_19, btnSha3_19, btn_back2, btn_main)
-
-
-# --- 4-19 Week Days ---
-btnDu4_19 = KeyboardButton("🔵Dushanba")
-btnSe4_19 = KeyboardButton("⚪️Seshanba")
-btnCho4_19 = KeyboardButton("🔴Chorshanba")
-btnPa4_19 = KeyboardButton("🟠Payshanba")
-btnJu4_19 = KeyboardButton("🟡Juma")
-btnSha4_19 = KeyboardButton("🟢Shanba")
-weekMenu4_19 = ReplyKeyboardMarkup(resize_keyboard=True).add(btnDu4_19, btnSe4_19, btnCho4_19, btnPa4_19, btnJu4_19, btnSha4_19, btn_back2, btn_main)
-
-
-# --- 5-19 Week Days ---
-btnDu5_19 = KeyboardButton("⚪️Dushanba")
-btnSe5_19 = KeyboardButton("🔴Seshanba")
-btnCho5_19 = KeyboardButton("🟠Chorshanba")
-btnPa5_19 = KeyboardButton("🟡Payshanba")
-btnJu5_19 = KeyboardButton("🟢Juma")
-btnSha5_19 = KeyboardButton("🔵Shanba")
-weekMenu5_19 = ReplyKeyboardMarkup(resize_keyboard=True).add(btnDu5_19, btnSe5_19, btnCho5_19, btnPa5_19, btnJu5_19, btnSha5_19, btn_back2, btn_main)
-
-
-# --- 6-19 Week Days ---
-btnDu6_19 = KeyboardButton("🔴Dushanba")
-btnSe6_19 = KeyboardButton("🟠Seshanba")
-btnCho6_19 = KeyboardButton("🟡Chorshanba")
-btnPa6_19 = KeyboardButton("🟢Payshanba")
-btnJu6_19 = KeyboardButton("🔵Juma")
-btnSha6_19 = KeyboardButton("⚪️Shanba")
-weekMenu6_19 = ReplyKeyboardMarkup(resize_keyboard=True).add(btnDu6_19, btnSe6_19, btnCho6_19, btnPa6_19, btnJu6_19, btnSha6_19, btn_back2, btn_main)
-
-
-
-
+    ],
+    resize_keyboard=True)
 

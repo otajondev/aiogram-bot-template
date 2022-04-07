@@ -14,7 +14,7 @@ async def regexp_email(msg: types.Message):
 
 
 @dp.message_handler(Regexp(PHONE_NUM))
-async def regexp_email(msg: types.Message):
+async def regexp_phone_number(msg: types.Message):
     await msg.answer("Telefon raqam qabul qilindi.")
 
 
