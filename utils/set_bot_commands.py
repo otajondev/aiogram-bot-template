@@ -10,3 +10,4 @@ async def set_default_commands(dp):
             # types.BotCommand("kurslar", "Kurslar haqida"),
         ]
     )
+
